@@ -2,43 +2,44 @@
 
 [![Java](https://img.shields.io/badge/Language-Java%2017+-orange?logo=java)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Framework-Spring%20Boot%203.x-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Postman](https://img.shields.io/badge/Testing-Postman-FF6C37?logo=postman&logoColor=white)](https://www.postman.com/)
 
-A robust, enterprise-grade E-commerce Backend REST API developed using Java and Spring Boot. It manages users, dynamic mobile inventories, and order processing with automated transactional business logic.
+A high-performance E-Commerce Backend REST API built with Java and Spring Boot to manage online mobile retail operations. It utilizes PostgreSQL for robust relational data storage, offering automated inventory handling, customer authentication, and transactional order fulfillment.
 
 ---
 
-## 📥 API & Collection Access
-Test and explore the API endpoints directly using Postman:
+## 📥 API & Project Access
+Clone the project repository or inspect the complete backend source code directly on GitHub:
 
-[![Run in Postman](https://img.shields.io/badge/Postman-API%20Testing-orange?style=for-the-badge&logo=postman)](https://github.com/AlagarSadjac)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/AlagarSadjac/e-cart-mobile-store-springboot)
 
-> 💡 **Repository Link:** [Explore Source Code & Documentation](https://github.com/AlagarSadjac)
+> 💡 **Repository Link:** [https://github.com/AlagarSadjac/e-cart-mobile-store-springboot](https://github.com/AlagarSadjac/e-cart-mobile-store-springboot)
 
 ---
 
 ## 📱 About The Project
-E-Cart Mobile Store API provides core backend services for an online mobile retail system. It automates inventory tracking, validates inputs, and ensures transaction consistency when processing multi-item customer orders without manual intervention.
+E-Cart Mobile Store API serves as the centralized backend service for an e-commerce platform specializing in mobile devices. It maps clean relational entities using JPA/Hibernate, connects to PostgreSQL for structured data integrity, provides full CRUD endpoints for product stocks, manages customer accounts, and ensures data consistency during checkout.
 
 ---
 
 ## ✨ Features
-* 👤 **User Management:** Secure user registration and profile management.
-* 📦 **Product Catalog:** Comprehensive mobile inventory handling (Name, Specs, Price, and Available Units).
-* 🛍️ **Order Placement:** Transactional checkout supporting multiple product quantities.
-* 📉 **Smart Stock Management:** Real-time atomic reduction of inventory stock upon order confirmation.
-* 💰 **Automated Calculations:** Dynamic price estimation and aggregate billing logic.
+* 👤 **User Management & Auth:** Handles user registration (`/register`), login verification (`/login`), and fetches account records.
+* 📦 **Product Catalog Management:** Full lifecycle management of mobile models (Create, Read, Update, Delete) with price and stock monitoring.
+* 🛍️ **Transactional Order Placement:** Seamless checkout linking registered users to selected products with order timestamps.
+* 📉 **Automated Stock Deduction:** Automatically computes and updates available product inventory upon every successful order.
+* 💰 **Dynamic Price Calculation:** Evaluates `totalPrice` instantly based on unit price and ordered quantity.
 
 ---
 
 ## 🛠️ Built With
 * **Language:** Java 17+
 * **Framework:** Spring Boot 3.x
-* **Data Access:** Spring Data JPA (Hibernate)
-* **Database:** MySQL
+* **Database:** PostgreSQL
+* **ORM / Persistence:** Spring Data JPA (Hibernate) & Jakarta Persistence
+* **Boilerplate Reduction:** Lombok (`@Data`, `@Entity`)
 * **Build Tool:** Maven
-* **API Testing & Verification:** Postman
+* **API Testing Tool:** Postman
 
 ---
 
@@ -61,34 +62,60 @@ E-Cart Mobile Store API provides core backend services for an online mobile reta
 
 ---
 
-## 🚀 How To Run & Test
+## 🚀 How To Run & API Endpoints
 
-### API Endpoints
-| HTTP Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `POST` | `/api/users/register` | Register a new user |
-| `POST` | `/api/products` | Add a new product to inventory |
-| `POST` | `/api/orders/place` | Place an order & reduce stock |
+### 📡 API Endpoints Reference
 
-### Setup Steps
-1. Clone the repository and configure your MySQL credentials in `application.properties`.
-2. Build and run using `./mvnw spring-boot:run`.
-3. Test endpoints using Postman by sending JSON payloads to `http://localhost:8080`.
+#### 1. User Endpoints (`/api/users`)
+* `GET /api/users` - Fetch all registered users
+* `POST /api/users/register` - Register a new customer
+* `POST /api/users/login?email={email}&password={password}` - Authenticate existing customer
+
+#### 2. Product Endpoints (`/api/products`)
+* `GET /api/products` - Retrieve list of available products
+* `POST /api/products` - Add a new product to inventory
+* `PUT /api/products/{id}` - Update existing product specifications/stock
+* `DELETE /api/products/{id}` - Remove a product from catalog
+
+#### 3. Order Endpoints (`/api/orders`)
+* `GET /api/orders/all` - List all placed customer orders
+* `POST /api/orders/place` - Place a new order & auto-deduct stock
+
+---
+
+### ⚙️ How To Run Locally
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/AlagarSadjac/e-cart-mobile-store-springboot.git](https://github.com/AlagarSadjac/e-cart-mobile-store-springboot.git)
+   ```
+2. Configure PostgreSQL settings in `src/main/resources/application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/ecommerce_db
+   spring.datasource.username=postgres
+   spring.datasource.password=your_password
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+   ```
+3. Run the Spring Boot application using Maven:
+   ```bash
+   mvn spring-boot:run
+   ```
+4. Access and test the endpoints via Postman at `http://localhost:8080`.
 
 ---
 
 ## 🎯 Purpose
-Designed to demonstrate backend architectural proficiency, database relation mappings, and transactional data consistency required for high-volume retail environments.
+To implement and demonstrate a clean, scalable RESTful API architecture following MVC principles, JPA entity associations (`@ManyToOne`), and automated transactional database updates backed by PostgreSQL.
 
 ---
 
 ## 🔮 Future Updates
-* 🔐 Spring Security with JWT Authentication
-* 💳 Payment Gateway (Razorpay/Stripe) integration
-* 🐳 Docker containerization and Render cloud deployment
-* 📄 Swagger / OpenAPI automated interactive docs
+* 🔐 Spring Security with JWT (JSON Web Tokens) role-based authorization
+* 📄 Swagger / OpenAPI interactive UI documentation
+* 🐳 Docker containerization and cloud deployment on Render
+* 🔍 Advanced pagination and filter queries for product inventory
 
 ---
 
 ## ⭐ Support
-If you find this backend implementation helpful, please give this repository a **Star (⭐)**!
+If you find this Spring Boot backend implementation helpful, please give this repository a **Star (⭐)**!
