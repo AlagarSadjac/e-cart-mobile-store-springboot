@@ -12,7 +12,7 @@ A high-performance E-Commerce Backend REST API built with Java and Spring Boot t
 ## 📥 API & Project Access
 Clone the project repository or inspect the complete backend source code directly on GitHub:
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/AlagarSadjac/e-cart-mobile-store-springboot)
+[![Live on Render](https://img.shields.io/badge/Render-Live%20API-46E3B7?style=for-the-badge&logo=render&logoColor=white)](
 
 ---
 
