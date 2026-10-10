@@ -114,5 +114,10 @@ To implement and demonstrate a clean, scalable RESTful API architecture followin
 
 ---
 
+## 👨‍💻 Developed By
+Alagarsamy — Software Developer
+
+---
+
 ## ⭐ Support
 If you find this Spring Boot backend implementation helpful, please give this repository a **Star (⭐)**!
