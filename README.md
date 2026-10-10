@@ -86,7 +86,7 @@ E-Cart Mobile Store API serves as the centralized backend service for an e-comme
 ### ⚙️ How To Run Locally
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/AlagarSadjac/e-cart-mobile-store-springboot.git](https://github.com/AlagarSadjac/e-cart-mobile-store-springboot.git)
+   git clone https://github.com/AlagarSadjac/e-cart-mobile-store-springboot.git
    ```
 2. Configure PostgreSQL settings in `src/main/resources/application.properties`:
    ```properties
@@ -112,7 +112,6 @@ To implement and demonstrate a clean, scalable RESTful API architecture followin
 ## 🔮 Future Updates
 * 🔐 Spring Security with JWT (JSON Web Tokens) role-based authorization
 * 📄 Swagger / OpenAPI interactive UI documentation
-* 🐳 Docker containerization and cloud deployment on Render
 * 🔍 Advanced pagination and filter queries for product inventory
 
 ---
