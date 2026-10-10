@@ -14,8 +14,6 @@ Clone the project repository or inspect the complete backend source code directl
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/AlagarSadjac/e-cart-mobile-store-springboot)
 
-> 💡 **Repository Link:** [https://github.com/AlagarSadjac/e-cart-mobile-store-springboot](https://github.com/AlagarSadjac/e-cart-mobile-store-springboot)
-
 ---
 
 ## 📱 About The Project
