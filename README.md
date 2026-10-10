@@ -1,6 +1,6 @@
 # 🛒 E-Cart Mobile Store API
 
-[![Java](https://img.shields.io/badge/Language-Java%2017+-orange?logo=java)](https://www.java.com/)
+[![Java](https://img.shields.io/badge/Language-Java%2021-orange?logo=java)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Framework-Spring%20Boot%203.x-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Postman](https://img.shields.io/badge/Testing-Postman-FF6C37?logo=postman&logoColor=white)](https://www.postman.com/)
@@ -31,7 +31,7 @@ E-Cart Mobile Store API serves as the centralized backend service for an e-comme
 ---
 
 ## 🛠️ Built With
-* **Language:** Java 17+
+* **Language:** Java 21
 * **Framework:** Spring Boot 3.x
 * **Database:** PostgreSQL
 * **ORM / Persistence:** Spring Data JPA (Hibernate) & Jakarta Persistence
