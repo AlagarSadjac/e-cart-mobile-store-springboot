@@ -35,7 +35,7 @@ E-Cart Mobile Store API serves as the centralized backend service for an e-comme
 * **Framework:** Spring Boot 4.x
 * **Database:** PostgreSQL
 * **ORM / Persistence:** Spring Data JPA (Hibernate) & Jakarta Persistence
-* **Boilerplate Reduction:** Lombok (`@Data`, `@Entity`)
+* **Boilerplate Reduction:** Lombok (`@Data`)
 * **Build Tool:** Maven
 * **API Testing Tool:** Postman
 
